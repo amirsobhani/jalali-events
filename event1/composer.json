@@ -1,0 +1,31 @@
+{
+    "name": "jalali-events/event",
+    "description": "jalali date event",
+    "authors": [{
+        "name": "Amir Hossein Sobhani",
+        "email": "amir-sobhani@outlook.com"
+    }],
+    "keywords": [
+        "date",
+        "time",
+        "DateTime",
+        "jalali date",
+        "jalali time",
+        "jalali event",
+        "jalali date event",
+        "jalali date holiday"
+    ],
+    "require": {
+        "php": "^7.1.8 || ^8.0",
+        "morilog/jalali": "3.*",
+        "nesbot/carbon": "^2.16",
+        "ext-curl": "*",
+        "ext-dom": "*"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "JalaliEvents\\Events\\": "src/"
+        }
+    }
+}
