@@ -28,7 +28,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "JalaliEvents\\Events\\": "src/"
+            "JalaliEvents\\": "src/"
         }
     }
 }

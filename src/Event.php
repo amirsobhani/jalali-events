@@ -1,6 +1,8 @@
 <?php
-namespace JalaliEvent\Events;
+namespace JalaliEvents;
 
+use DOMDocument;
+use DOMXPath;
 use GuzzleHttp\Client;
 use Morilog\Jalali\CalendarUtils;
 

@@ -1,27 +1,27 @@
 <?php
-namespace JalaliEvent\Events;
+namespace JalaliEvents;
 
 use Carbon\CarbonPeriod;
 use Morilog\Jalali\CalendarUtils;
 
 class DateEvent
 {
-    protected static $event;
+    protected $event;
 
     public function __construct()
     {
-        self::$event = new Event();
+        $this->event = new Event();
     }
 
     public static function day($day, $type = 'gregorian', $holiday_status = false)
     {
-        $data = '';
+        $data = [];
 
         if ($type == 'gregorian') {
             list($year, $month, $new_day) = explode('-', $day);
             $day = $year.'-'.$month.'-'.$new_day;
 
-            $data = self::$event->getEvents($day);
+            $data = (new self())->event->getEvents($day);
 
         } elseif ($type == 'jalali') {
             list($jyear, $jmonth, $jday) = explode('-', $day);
@@ -29,7 +29,7 @@ class DateEvent
 
             $day = $year.'-'.$month.'-'.$new_day;
 
-            $data = self::$event->getEvents($day);
+            $data = (new self())->event->getEvents($day);
 
         } else {
             return 'type is not valid!';
@@ -61,7 +61,7 @@ class DateEvent
         }
 
         foreach ($time_period as $day) {
-            $data[] = self::$event->getEvents($day);
+            $data[] = (new self())->event->getEvents($day);
         }
 
         return $data;
