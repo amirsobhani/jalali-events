@@ -13,7 +13,8 @@
         "jalali time",
         "jalali event",
         "jalali date event",
-        "jalali date holiday"
+        "jalali date holiday",
+        "jalali event date holiday"
     ],
     "require": {
         "php": "^7.1.8 || ^8.0",
