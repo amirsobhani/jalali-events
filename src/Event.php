@@ -1,5 +1,5 @@
 <?php
-
+namespace JalaliEvent\Events;
 
 use GuzzleHttp\Client;
 use Morilog\Jalali\CalendarUtils;

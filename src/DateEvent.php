@@ -1,5 +1,5 @@
 <?php
-
+namespace JalaliEvent\Events;
 
 use Carbon\CarbonPeriod;
 use Morilog\Jalali\CalendarUtils;
