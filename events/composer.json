@@ -5,6 +5,7 @@
         "name": "Amir Hossein Sobhani",
         "email": "amir-sobhani@outlook.com"
     }],
+    "license": "MIT",
     "keywords": [
         "date",
         "time",
