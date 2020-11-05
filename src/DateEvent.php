@@ -43,7 +43,11 @@ class DateEvent
         $data = [];
 
         if ($type == 'gregorian') {
-            $time_period = CarbonPeriod::create($start_date, $end_date)->toArray();
+            try {
+                $time_period = CarbonPeriod::create($start_date, $end_date)->toArray();
+            } catch (\Exception $exception) {
+                die($exception);
+            }
 
         } elseif ($type == 'jalali') {
             list($jyear, $jmonth, $jday) = explode('-', $start_date);
